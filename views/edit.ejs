@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../icon/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="col-md-8 col-md-push-2">
+      <h2 class="bg-danger text-center">Bảng sửa video</h2>
+      <form action="../edit/<%= data.id %>" method="POST" role="form" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <label for="">Tiêu đề</label>
+          <input type="text" class="form-control" id="title" name="title" value="<%= data.title %>" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+          <label for="">Mô tả</label>
+          <input type="text" class="form-control" id="mota" nmae="mota" value="<%= data.mota %>" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+          <label for="">Từ khóa</label>
+          <input type="text" class="form-control" id="key" name="key" value="<%= data.key %>" placeholder="Input field">
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-6">
+            Ảnh cũ: <img width="150px" src="../../upload/<%= data.image %>" alt="">
+          </div>
+          <div class="col-md-6">
+            <label class="btn btn-default btn-file">Ảnh mới: </label>
+            <input type="file" name="uploadfile">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

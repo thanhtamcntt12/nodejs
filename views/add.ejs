@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../icon/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="col-md-8 col-md-push-2">
+      <form action="add" method="POST" role="form" enctype="multipart/form-data">
+        <legend>Upload File</legend>
+
+        <div class="form-group">
+          <label for="">Tiêu đề</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+          <label for="">Mô tả</label>
+          <input type="text" class="form-control" id="mota" nmae="mota" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+          <label for="">Từ khóa</label>
+          <input type="text" class="form-control" id="key" name="key" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+          <label for="">Hình ảnh</label>
+          <input type="file" class="form-control" id="uploadfile" name="uploadfile" placeholder="Input field">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

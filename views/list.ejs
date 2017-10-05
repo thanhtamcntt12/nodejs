@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../icon/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-push-2">
+      <table class="table table-hover">
+        <thead>
+          <tr class="bg-success text-center">
+            <td colspan="6"><a href="add">Thêm video</a></td>
+          </tr>
+          <tr class="bg-primary">
+            <th>ID</th>
+            <th>Tiêu đề</th>
+            <th>Mô tả</th>
+            <th>Từ khóa</th>
+            <th>Ảnh</th>
+            <th>Sửa - Xóa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.rows.forEach(function(item){ %>
+            <tr>
+              <td><%= item.id %></td>
+              <td><%= item.title %></td>
+              <td><%= item.mota %></td>
+              <td><%= item.key %></td>
+              <td><img width="150px" src="../upload/<%= item.image %>"></td>
+              <td><a href="edit/<%= item.id %>"><span class="fa fa-edit">Sửa</span></a> - <a href="delete/<%= item.id %>" onclick = "return confirm('Are you sure?')"><span class="fa-remove">Xóa</span></a></td>
+            </tr>
+          <% }) %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
